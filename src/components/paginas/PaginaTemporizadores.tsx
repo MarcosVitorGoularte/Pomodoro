@@ -75,8 +75,8 @@ export function PaginaTemporizadores() {
   }
 
   return (
-    <div className="relative flex min-h-screen flex-col bg-gray-100 font-sans text-gray-900">
-      <main className="mx-auto w-full max-w-7xl flex-1 p-6">
+    <div className="relative flex flex-col bg-gray-100 font-sans text-gray-900">
+      <section className="mx-auto w-full max-w-7xl flex-1 p-6">
         {view === 'foco' ? (
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div className="flex flex-col items-center justify-center rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm lg:col-span-2">
@@ -264,7 +264,7 @@ export function PaginaTemporizadores() {
             </div>
           </div>
         )}
-      </main>
+      </section>
 
       {modalAberto && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">

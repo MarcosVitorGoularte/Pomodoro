@@ -1,0 +1,32 @@
+import { tarefasIniciais } from '../dominio/dadosIniciais'
+import type { DadosTarefa, Tarefa } from '../dominio/tipos'
+import { CHAVES } from '../persistencia/armazenamento'
+import { ehListaDeTarefas } from '../persistencia/validarFormato'
+import { usePersistido } from './usePersistido'
+
+// Lista de tarefas salva em "pomodoro.tarefas" (RF-15 a RF-17)
+export function useTarefas() {
+  const [tarefas, setTarefas] = usePersistido(CHAVES.tarefas, ehListaDeTarefas, tarefasIniciais)
+
+  function criar(dados: DadosTarefa) {
+    const agora = Date.now()
+    const nova: Tarefa = { ...dados, id: String(agora), criadaEm: agora, atualizadaEm: agora }
+    setTarefas((atuais) => [...atuais, nova])
+  }
+
+  function editar(id: string, dados: DadosTarefa) {
+    const agora = Date.now()
+    setTarefas((atuais) =>
+      atuais.map((t) => (t.id === id ? { ...t, ...dados, atualizadaEm: agora } : t)),
+    )
+  }
+
+  function excluir(id: string) {
+    setTarefas((atuais) => atuais.filter((t) => t.id !== id))
+  }
+
+  return { tarefas, criar, editar, excluir }
+}
+
+// O "pacote" que o hook devolve, usado como tipo das props da ListaTarefas
+export type ControleTarefas = ReturnType<typeof useTarefas>

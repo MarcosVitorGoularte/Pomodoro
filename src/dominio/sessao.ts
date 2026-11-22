@@ -1,6 +1,6 @@
 import type { DadosTemporizador, Fase, SessaoAtiva, Temporizador } from './tipos'
 
-const MINUTO = 60
+const MINUTO = 60_000
 
 export const FASES: Fase[] = ['foco', 'pausaCurta', 'pausaLonga']
 

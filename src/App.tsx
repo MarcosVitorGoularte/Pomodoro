@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { Timer, TriangleAlert } from 'lucide-react'
 import { PaginaFoco } from './components/paginas/PaginaFoco'
 import { PaginaTemporizadores } from './components/paginas/PaginaTemporizadores'
-import { useSessao } from './hooks/useSessao'
-import { useTarefas } from './hooks/useTarefas'
-import { useFalhaAoSalvar } from './hooks/usePersistido'
-import { useTemporizadores } from './hooks/useTemporizadores'
+import { useSessao } from './hooks/useSessao.ts'
+import { useTarefas } from './hooks/useTarefas.ts'
+import { useFalhaAoSalvar } from './hooks/usePersistido.ts'
+import { useTemporizadores } from './hooks/useTemporizadores.ts'
 
 type Tipo = 'foco' | 'temporizadores'
 
@@ -16,7 +16,7 @@ const abas: { id: Tipo; nomeBotao: string }[] = [
 
 export default function App() {
   const { temporizadores, criar, editar, excluir } = useTemporizadores()
-  const { tarefas } = useTarefas()
+  const tarefas = useTarefas()
   const controle = useSessao()
   const falhaAoSalvar = useFalhaAoSalvar()
   const [tipo, setTipo] = useState<Tipo>('foco')
@@ -81,9 +81,8 @@ export default function App() {
           <PaginaFoco
             temporizadores={temporizadores}
             selecionado={selecionado}
-            emUsoId={emUsoId}
-            tarefas={tarefas}
             controle={controle}
+            tarefas={tarefas}
             onSelecionar={selecionar}
             onGerenciar={() => setTipo('temporizadores')}
           />
@@ -91,10 +90,7 @@ export default function App() {
         {tipo === 'temporizadores' && (
           <PaginaTemporizadores
             temporizadores={temporizadores}
-            selecionadoId={selecionadoId}
             emUsoId={emUsoId}
-            onSelecionar={selecionar}
-            onGerenciar={() => setTipo('foco')}
             onUsar={usar}
             onCriar={criar}
             onEditar={editar}

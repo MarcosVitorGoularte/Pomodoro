@@ -1,5 +1,5 @@
 const botao =
-  'flex cursor-pointer intens-center justify-center gap-2 rounded-xl px-4 py-2 font-medium transition disabled:cursor-not-allowed disabled:opacity-40'
+  'flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2 font-medium transition disabled:cursor-not-allowed disabled:opacity-40'
 
 export const botaoPrimario = `${botao} bg-gray-900 text-white shadow-sm enabled:hover>bg-gray-800`
 

@@ -21,7 +21,7 @@ export function Modal({ titulo, descricao, onFechar, children }: Props) {
       onClose={onFechar}
       onClick={(evento) => evento.target === evento.currentTarget && onFechar()}
       aria-labelledby="modal-titulo"
-      className="relative w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl backdrop:bg-black/50"
+      className="m-auto w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl backdrop:bg-black/50"
     >
       <button
         type="button"

@@ -94,7 +94,7 @@ export function FormTemporizador({ inicial, onSalvar, onFechar }: Props) {
                     onChange={(evento) =>
                       setNumeros({ ...numeros, [c.chave]: evento.target.value })
                     }
-                    className={'${campo} pr-12'}
+                    className={`${campo} pr-12`}
                   />
                   <span className="absolute top-2.5 right-3 text-xs text-gray-400">
                     {c.unidade}

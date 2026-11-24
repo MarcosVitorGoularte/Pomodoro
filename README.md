@@ -33,6 +33,7 @@ npm run dev   # inicia o servidor de desenvolvimento
 - O estado da sessão fica no `App` (via hook), e não na página, para continuar ao trocar de aba.
 - O cronômetro guarda o horário de fim da fase em vez de contar segundos. Assim o tempo não atrasa com a aba em segundo plano e a sessão é recalculada ao reabrir o navegador.
 - Valores derivados (tempo restante, "em uso", ordem das tarefas) são calculados na hora, não salvos.
+- Valores padrão base para as tarefas e temporizadores iniciais predefinidos, podem ser removidos pelo usuário.
 
 ## Divisão de trabalho
 

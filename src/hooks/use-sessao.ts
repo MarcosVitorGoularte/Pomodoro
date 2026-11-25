@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import * as regras from '../dominio/sessao.ts'
 import type { SessaoAtiva, Temporizador } from '../dominio/tipos.ts'
 import { CHAVES } from '../persistencia/armazenamento.ts'
-import { ehSessaoOuNada } from '../persistencia/validarFormato.ts'
-import { prepararAudio, tocarAlerta } from '../servicos/alertaSonoro.ts'
-import { usePersistido } from './usePersistido.ts'
+import { ehSessaoOuNada } from '../persistencia/validar-formato.ts'
+import { prepararAudio, tocarAlerta } from '../servicos/alerta-sonoro.ts'
+import { usePersistido } from './use-persistido.ts'
 
 export function useSessao() {
   const [sessao, setSessao] = usePersistido<SessaoAtiva | null>(

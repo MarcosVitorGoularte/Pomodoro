@@ -1,8 +1,8 @@
-import { temporizadoresIniciais } from '../dominio/dadosIniciais'
+import { temporizadoresIniciais } from '../dominio/dados-iniciais'
 import type { DadosTemporizador, Temporizador } from '../dominio/tipos'
 import { CHAVES } from '../persistencia/armazenamento'
-import { ehListaDeTemporizadores } from '../persistencia/validarFormato'
-import { usePersistido } from './usePersistido'
+import { ehListaDeTemporizadores } from '../persistencia/validar-formato'
+import { usePersistido } from './use-persistido'
 
 export function useTemporizadores() {
   const [temporizadores, setTemporizadores] = usePersistido(

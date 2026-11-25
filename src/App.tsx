@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { Timer, TriangleAlert } from 'lucide-react'
-import { PaginaFoco } from './components/paginas/PaginaFoco'
-import { PaginaTemporizadores } from './components/paginas/PaginaTemporizadores'
-import { useSessao } from './hooks/useSessao.ts'
-import { useTarefas } from './hooks/useTarefas.ts'
-import { useFalhaAoSalvar } from './hooks/usePersistido.ts'
-import { useTemporizadores } from './hooks/useTemporizadores.ts'
+import { PaginaFoco } from './components/paginas/pagina-foco.tsx'
+import { PaginaTemporizadores } from './components/paginas/pagina-temporizadores.tsx'
+import { useSessao } from './hooks/use-sessao.ts'
+import { useTarefas } from './hooks/use-tarefas.ts'
+import { useFalhaAoSalvar } from './hooks/use-persistido.ts'
+import { useTemporizadores } from './hooks/use-temporizadores.ts'
 
 type Tipo = 'foco' | 'temporizadores'
 

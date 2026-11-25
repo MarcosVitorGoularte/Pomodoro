@@ -2,9 +2,9 @@ import { useState, type FormEvent } from 'react'
 import { ORDEM_ESTADO, ORDEM_PRIORIDADE, TAREFA_PADRAO } from '../../dominio/tarefas'
 import type { DadosTarefa, EstadoTarefa, Prioridade, Tarefa } from '../../dominio/tipos'
 import { semErros, validarTarefa, type Erros } from '../../dominio/validacao'
-import { Campo } from '../Campo'
+import { Campo } from '../campo'
 import { botaoPrimario, botaoSecundario, campo } from '../estilos'
-import { Modal } from '../Modal'
+import { Modal } from '../modal'
 import { nomeEstado, nomePrioridade } from '../textos'
 
 interface Props {

@@ -1,9 +1,9 @@
 import { FASES } from '../../dominio/sessao.ts'
 import type { Temporizador } from '../../dominio/tipos.ts'
-import type { ControleSessao } from '../../hooks/useSessao.ts'
-import type { ControleTarefas } from '../../hooks/useTarefas.ts'
+import type { ControleSessao } from '../../hooks/use-sessao.ts'
+import type { ControleTarefas } from '../../hooks/use-tarefas.ts'
 import { botaoPerigo, botaoPrimario, botaoSecundario, cartao } from '../estilos.ts'
-import { ListaTarefas } from '../tarefas/ListaTarefas'
+import { ListaTarefas } from '../tarefas/lista-tarefas.tsx'
 import { nomeFase } from '../textos.ts'
 
 interface Props {

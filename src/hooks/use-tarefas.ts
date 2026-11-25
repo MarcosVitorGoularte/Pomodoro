@@ -1,8 +1,8 @@
-import { tarefasIniciais } from '../dominio/dadosIniciais'
+import { tarefasIniciais } from '../dominio/dados-iniciais'
 import type { DadosTarefa, Tarefa } from '../dominio/tipos'
 import { CHAVES } from '../persistencia/armazenamento'
-import { ehListaDeTarefas } from '../persistencia/validarFormato'
-import { usePersistido } from './usePersistido'
+import { ehListaDeTarefas } from '../persistencia/validar-formato'
+import { usePersistido } from './use-persistido'
 
 export function useTarefas() {
   const [tarefas, setTarefas] = usePersistido(CHAVES.tarefas, ehListaDeTarefas, tarefasIniciais)

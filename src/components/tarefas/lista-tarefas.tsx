@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { Pencil, Trash2 } from 'lucide-react'
 import { ordenarTarefas } from '../../dominio/tarefas'
 import type { Prioridade, Tarefa } from '../../dominio/tipos'
-import type { ControleTarefas } from '../../hooks/useTarefas'
+import type { ControleTarefas } from '../../hooks/use-tarefas'
 import { botaoPrimario, cartao } from '../estilos'
 import { nomeEstado, nomePrioridade } from '../textos'
-import { FormTarefa } from './FormTarefa'
+import { FormTarefa } from './form-tarefas'
 
 const corPrioridade: Record<Prioridade, string> = {
   alta: 'bg-gray-900 text-white',

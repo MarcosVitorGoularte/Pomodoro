@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import type { DadosTemporizador, Temporizador } from '../../dominio/tipos'
 import { botaoPerigo, botaoPrimario, botaoSecundario } from '../estilos'
-import { FormTemporizador } from '../temporizadores/FormTemporizador'
+import { FormTemporizador } from '../temporizadores/form-temporizador'
 
 interface Props {
   temporizadores: Temporizador[]

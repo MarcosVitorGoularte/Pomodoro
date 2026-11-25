@@ -1,9 +1,9 @@
 import { useState, type FormEvent } from 'react'
 import type { DadosTemporizador, Temporizador } from '../../dominio/tipos'
 import { semErros, validarTemporizador, type Erros } from '../../dominio/validacao'
-import { Campo } from '../Campo'
+import { Campo } from '../campo'
 import { botaoPrimario, botaoSecundario, campo } from '../estilos'
-import { Modal } from '../Modal'
+import { Modal } from '../modal'
 
 interface Props {
   inicial?: Temporizador
